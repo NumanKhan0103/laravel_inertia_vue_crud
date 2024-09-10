@@ -1,9 +1,13 @@
 <script setup>
-  import { Link } from '@inertiajs/vue3'; 
+  import { Link, Head } from '@inertiajs/vue3'; 
  
   </script>
 
 <template>
+    <Head>
+        <title> My App</title>
+        <meta head-key="description" name="description" content="default description of the App">
+    </Head>
     <div class="h-screen flex overflow-hidden">
       <!-- Sidebar -->
       <div class="w-64 bg-gray-800 overflow-y-auto py-4 px-3">

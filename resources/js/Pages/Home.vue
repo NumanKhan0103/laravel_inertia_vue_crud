@@ -1,15 +1,16 @@
 <script setup>
-// import Layout from '../Layouts/Layout.vue';
-
-// defineOptions({ layout: Layout})
 </script>
 
 <template>
-    <!-- <Layout> -->
+    <!-- when pass only title  -->
+    <Head title=" | Home" />
 
-        <div>
-            <h1 class="bg-fuchsia-500 text-xl">Home page</h1>
-        </div>
-    <!-- </Layout> -->
+    <!-- when passing title and description  -->
+    <!-- <Head>
+        <title> Home</title>
+        <meta head-key="description" name="description" content="home page  description of the App">
+    </Head> -->
+    <div>
+        <h1 class="bg-fuchsia-500 text-xl">Home page</h1>
+    </div>
 </template>
-
