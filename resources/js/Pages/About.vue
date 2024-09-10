@@ -1,5 +1,4 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
 
 defineProps({
     user: String,
@@ -8,7 +7,7 @@ defineProps({
 
 <template>
 
-<Head title=" | About Us" />
+    <Head title=" | About Us" />
 
     <!-- <Head>
         <title> About Us</title>

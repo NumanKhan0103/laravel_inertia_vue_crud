@@ -3,6 +3,7 @@
 
 <template>
     <!-- when pass only title  -->
+
     <Head title=" | Home" />
 
     <!-- when passing title and description  -->
