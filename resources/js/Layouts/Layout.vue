@@ -14,10 +14,10 @@
         <div class="text-lg font-bold text-white mb-4">Admin Panel</div>
         <ul>
           <li class="mb-4">
-            <Link  href="/" class="text-gray-300 hover:text-white">Home</Link>
+            <Link  :href="route('home')" class="text-gray-300 hover:text-white">Home</Link>
           </li>
           <li class="mb-4">
-            <Link  href="/about" class="text-gray-300 hover:text-white">About</Link>
+            <Link  :href="route('about')" class="text-gray-300 hover:text-white">About</Link>
           </li>
         </ul>
       </div>
