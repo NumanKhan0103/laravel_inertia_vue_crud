@@ -1,16 +1,8 @@
 <?php
 
-use Inertia\Inertia;
+
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    // sleep(2);
-    return Inertia::render('Home');
-})->name('home');
+Route::inertia('/', 'Home')->name('home');
 
-
-// Route::get('/about', function () {
-//     return inertia('About',['user' => 'Numan Khan']);
-// });
-
-Route::inertia('/about', 'About', ['user' => 'Numan Khan'])->name('about');
+Route::inertia('/register', 'Auth/Register')->name('register');
