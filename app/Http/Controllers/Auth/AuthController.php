@@ -40,7 +40,7 @@ class AuthController extends Controller
 
 
         // Attempt to login with the credentials
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if (Auth::attempt($request->only('email', 'password'), $request->remember)) {
             // Regenerate session
             $request->session()->regenerate();
 

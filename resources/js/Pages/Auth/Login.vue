@@ -5,6 +5,7 @@ import { useForm } from "@inertiajs/vue3";
 const form = useForm({
     email: '',
     password: '',
+    remember: '',
 });
 
 
@@ -12,7 +13,7 @@ const submit = () => {
 
     form.post('/login', {
 
-        onError: () => form.reset("password"),
+        onError: () => form.reset("password", 'remember'),
     });
 };
 
@@ -30,8 +31,15 @@ const submit = () => {
             
             <TextInput name="password" type="password" v-model="form.password" :message="form.errors.password" />
 
+         <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+                <label for="">Remember me</label>
+                <input type="checkbox" id="remember-me" v-model="form.remember" />
+            </div>
+
+            <p> Need an a account? <a :href="route('register')" class="text-link"> Register</a></p>
+         </div>
             <div>
-                <p> Need an a account? <a :href="route('register')" class="text-link"> Register</a></p>
                 <button class="primary-btn" type="submit" :disabled="form.processing">Login</button>
             </div>
         </form>
