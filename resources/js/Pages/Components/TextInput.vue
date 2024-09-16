@@ -16,6 +16,7 @@ defineProps({
         default: "text",
     },
     message: String,
+    placeholder: String,
 });
 </script>
 
@@ -25,7 +26,7 @@ defineProps({
         <input
             :id="name" 
             :type="type"
-            placeholder="John Doe" 
+            :placeholder="placeholder ?? 'Jon Doe'" 
             v-model="model"
             :class="['shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', { '!ring-red-500': message }]">
         <span class="text-red-500" v-if="message">{{ message }}</span>

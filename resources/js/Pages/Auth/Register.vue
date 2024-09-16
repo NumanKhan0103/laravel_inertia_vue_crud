@@ -29,13 +29,13 @@ const submit = () => {
         <form class="w-full max-w-md" @submit.prevent="submit">
             <h1 class="text-3xl font-bold mb-4">Register</h1>
 
-            <TextInput name="name" type="text" v-model="form.name" :message="form.errors.name" />
+            <TextInput name="name" type="text"  v-model="form.name" :message="form.errors.name" />
             
-            <TextInput name="email" type="email" v-model="form.email" :message="form.errors.email" />
+            <TextInput name="email" type="email" placeholder="example@gmail.com" v-model="form.email" :message="form.errors.email" />
             
-            <TextInput name="password" type="password" v-model="form.password" :message="form.errors.password" />
+            <TextInput name="password" type="password" placeholder="***********" v-model="form.password" :message="form.errors.password" />
 
-            <TextInput name="password" type="password" v-model="form.password_confirmation" />
+            <TextInput name="Password Confirmation" type="password" placeholder="***********" v-model="form.password_confirmation" />
 
             <div>
                 <p> Already a user? <a :href="route('login')" class="text-link"> Login</a></p>

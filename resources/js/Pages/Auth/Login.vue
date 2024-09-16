@@ -27,9 +27,9 @@ const submit = () => {
         <form class="w-full max-w-md" @submit.prevent="submit">
             <h1 class="text-3xl font-bold mb-4">Login</h1>
             
-            <TextInput name="email" type="email" v-model="form.email" :message="form.errors.email" />
+            <TextInput name="email" type="email" placeholder="example@gmail.com"  v-model="form.email" :message="form.errors.email" />
             
-            <TextInput name="password" type="password" v-model="form.password" :message="form.errors.password" />
+            <TextInput name="password" type="password" placeholder="***********" v-model="form.password" :message="form.errors.password" />
 
          <div class="flex items-center justify-between mb-2">
             <div class="flex items-center gap-2">
