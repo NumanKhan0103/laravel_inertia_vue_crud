@@ -5,6 +5,7 @@ import { useForm } from "@inertiajs/vue3";
 const form = useForm({
     name: '',
     email: '',
+    avatar: null,
     password: '',
     password_confirmation: ''
 });
@@ -16,6 +17,13 @@ const submit = () => {
 
         onError: () => form.reset("password", "password_confirmation"),
     });
+};
+
+
+// function for uploading file 
+const change = (e) => {
+
+    form.avatar = e.target.files[0];
 };
 
 </script>
@@ -37,6 +45,11 @@ const submit = () => {
 
             <TextInput name="Password Confirmation" type="password" placeholder="***********" v-model="form.password_confirmation" />
 
+            <div>
+                <label for=""> Avatar</label>
+                <input type="file" id="avatar" accept="image/*"  @input="change"/>
+                <span class="text-red-500" >{{ form.errors.avatar }}</span>
+            </div>
             <div>
                 <p> Already a user? <a :href="route('login')" class="text-link"> Login</a></p>
                 <button class="primary-btn" type="submit" :disabled="form.processing">Register</button>
